@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1 id="title">Formulario de contacto</h1>
+    <p id="description">Dejanos tu mensaje y te responderemos cuando tengamos ganas!</p>
+
+    <form id="survey-form">
+        <div class="form-group">
+            <label for="name" id="name-label">Nombre:</label>
+            <input type="text" id="name" placeholder="Ingrese su nombre" required class="inputs-text">
+        </div>
+        <div class="form-group">
+            <label for="email" id="email-label">Email:</label>
+            <input type="email" id="email" placeholder="Ingrese su email" required class="inputs-text"> 
+        </div>
+        <div class="form-group">
+            <label for="number" id="number-label">Edad:</label>
+            <input type="number" id="number" placeholder="Ingrese su edad" min="18" max="90" class="inputs-text">
+        </div>
+        <div class="form-group">
+            <label for="dropdown">Motivo de contacto</label>
+            <select name="dropdown" id="dropdown">
+                <option value="" selected disabled>Seleccione su motivo de contacto</option>
+                <option value="consulta">Consulta</option>
+                <option value="sugerencia">Sugerencia</option>
+                <option value="presupuesto">Presupuesto</option>
+            </select>
+        </div>
+        <div class="form-group inputs-radio-checkbox">
+            <p>Seleccione su color favorito</p>
+            <label for="radio"><input type="radio" name="radio" value="Rojo">Rojo</label>
+            <label for="radio"><input type="radio" name="radio" value="Verde">Verde</label>
+            <label for="radio"><input type="radio" name="radio" value="Amarillo">Amarillo</label>
+            <label for="radio"><input type="radio" name="radio" value="Azul">Azul</label>
+        </div>
+        <div class="form-group inputs-radio-checkbox">
+            <p>Seleccione su trabajo favorito</p>
+            <label for="frontend"><input name="checkbox" type="checkbox" value="front">Frontend</label>
+            <label for="backend"><input name="checkbox" type="checkbox" value="back">Backend</label>
+            <label for="diputado"><input name="checkbox" type="checkbox" value="vago">Diputado</label>
+        </div>
+        <div class="form-group">
+            <textarea name="texto" id="textarea" cols="30" rows="10"></textarea>
+        </div>
+        <button type="submit" id="submit">Enviar</button>
+    </form>
+</body>
+</html>
